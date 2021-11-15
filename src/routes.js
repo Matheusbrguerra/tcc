@@ -1,8 +1,9 @@
 const { Router } = require('express')
-const UsuarioController = require('./app/controllers/UsuarioController')
+const AtendimentoController = require('./app/controllers/AtendimentoController')
 
 const routes = new Router()
 
-routes.get('/users',UsuarioController.index)
+routes.get('/atendimentos',AtendimentoController.index)
+routes.delete('/atendimentos/:id',AtendimentoController.destroy)
 
 module.exports = routes
