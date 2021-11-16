@@ -7,7 +7,22 @@ const Convenio = require('../app/models/Convenio')
 const Procedencia = require('../app/models/Procedencia')
 const TipoAtendimento = require('../app/models/TipoAtendimento')
 const Atendimento = require('../app/models/Atendimento')
-const models = [Usuario,Pessoa,Convenio,Procedencia,TipoAtendimento,Atendimento];
+const Prescricao = require('../app/models/Prescricao')
+const Procedimento = require('../app/models/Procedimento')
+const StatusExec = require('../app/models/StatusExec')
+const PrescricaoProcedimento = require('../app/models/PrescricaoProcedimento')
+const models = [
+  Usuario,
+  Pessoa,
+  Convenio,
+  Procedencia,
+  TipoAtendimento,
+  Atendimento,
+  Prescricao,
+  Procedimento,
+  StatusExec,
+  PrescricaoProcedimento
+];
 
 class Database {
   constructor() {
