@@ -1,13 +1,30 @@
 const Prescricao = require('../models/Prescricao');
 const Atendimento = require('../models/Atendimento');
 const Pessoa = require('../models/Pessoa');
+const Convenio = require('../models/Convenio');
+const Procedencia = require('../models/Procedencia');
+const TipoAtendimento = require('../models/TipoAtendimento');
 
 class PrescricaoController {
     async index(req, res) {
         try {
             const prescricoes = await Prescricao.findAll({
                 include: [{
-                    model: Atendimento
+                    model: Atendimento,
+                    include: [
+                        {
+                            model: Pessoa
+                        },
+                        {
+                            model: Convenio
+                        },
+                        {
+                            model: Procedencia
+                        },
+                        {
+                            model: TipoAtendimento
+                        },
+                    ]
                 }, {
                     model: Pessoa
                 }]
