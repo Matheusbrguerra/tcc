@@ -35,7 +35,7 @@ class Prescricao extends Sequelize.Model {
                 },
                 Dt_suspensao:  {
                     field:'Dt_suspensao',
-                    allowNull: false,
+                    allowNull: true,
                     type: Sequelize.DATE,
                 },
                 Chave_nrec: {
