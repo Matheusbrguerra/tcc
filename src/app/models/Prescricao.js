@@ -65,10 +65,9 @@ class Prescricao extends Sequelize.Model {
     }
 
     static associate(models) {
-        // const { AlcadaContexto, AlcadaLog, Usuario, AlcadaPoc } = models;
-        // this.belongsTo(AlcadaContexto, { foreignKey: 'ContextoId' });
-        // this.hasMany(AlcadaLog);
-        // this.belongsTo(Usuario);
+        const { Atendimento, Pessoa } = models;
+        this.belongsTo(Atendimento, { foreignKey: 'IdAtendimento' })
+        this.belongsTo(Pessoa, { foreignKey: 'IdPessoa' });
     }
 
 }

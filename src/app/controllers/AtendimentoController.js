@@ -39,7 +39,7 @@ class AtendimentoController {
                     id,
                 }
             })
-            return res.send({msg:`O Atendimento foi excluído com sucesso !!`})
+            return res.send({msg:`O Atendimento foi cancelado com sucesso !!`})
         } catch (error) {
             return res.status(500).send(error);
         }
