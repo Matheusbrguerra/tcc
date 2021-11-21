@@ -7,8 +7,12 @@ const TipoAtendimento = require('../models/TipoAtendimento');
 
 class PrescricaoController {
     async index(req, res) {
+        const {id} = req.params
         try {
             const prescricoes = await Prescricao.findAll({
+                where:{
+                    IdAtendimento:id
+                },
                 include: [{
                     model: Atendimento,
                     include: [
